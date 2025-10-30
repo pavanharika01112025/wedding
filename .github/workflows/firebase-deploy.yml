@@ -1,0 +1,12 @@
+name: Legacy Firebase deploy (disabled)
+
+on:
+  push:
+    branches: [ "__disabled__" ]
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This legacy workflow is disabled. Use Firebase-generated workflows."
+
