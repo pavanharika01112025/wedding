@@ -1,4 +1,27 @@
-// Wedding Countdown Timer
+// ============================================
+// WEDDING WEBSITE CONFIGURATION
+// ============================================
+// Update these values to enable features
+const WEDDING_CONFIG = {
+    // YouTube Live Stream URL for Wedding
+    // Example: 'https://www.youtube.com/watch?v=YOUR_VIDEO_ID'
+    // Or: 'https://youtu.be/YOUR_VIDEO_ID'
+    youtubeLiveUrl: '', // Add your YouTube live URL here
+    
+    // Enable YouTube Live button for Wedding section
+    enableYouTubeWedding: false, // Set to true to show YouTube button in Wedding section
+    
+    // Enable YouTube Live button for Reception section
+    enableYouTubeReception: false, // Set to true to show YouTube button in Reception section
+    
+    // Photos/Drive URL (optional)
+    photosDriveUrl: '',
+    enablePhotos: false
+};
+
+// ============================================
+// WEDDING COUNTDOWN TIMER
+// ============================================
 function updateCountdown() {
     // Set the wedding date: November 1st, 2025 at 10:58 AM
     const weddingDate = new Date('2025-11-01T10:58:00');
@@ -245,42 +268,55 @@ function initMobileButtonEffects() {
     });
 }
 
-// Future features initialization
+// ============================================
+// FUTURE FEATURES INITIALIZATION
+// ============================================
 function initFutureFeatures() {
-    // Configuration for future features
-    const futureConfig = {
-        youtubeLiveUrl: '', // Add YouTube live URL here when ready
-        photosDriveUrl: '', // Add Google Drive photos URL here when ready
-        enableYouTube: false, // Set to true to show YouTube button
-        enablePhotos: false   // Set to true to show Photos button
-    };
-    
-    // Show/hide YouTube button
-    const youtubeButtons = document.querySelectorAll('.youtube-button');
-    youtubeButtons.forEach(button => {
-        if (futureConfig.enableYouTube && futureConfig.youtubeLiveUrl) {
-            button.style.display = 'flex';
-            button.addEventListener('click', function() {
-                window.open(futureConfig.youtubeLiveUrl, '_blank');
+    // Enable YouTube Live button for Wedding section
+    const weddingSection = document.getElementById('wedding');
+    if (weddingSection) {
+        const weddingYoutubeButton = weddingSection.querySelector('.youtube-button');
+        if (weddingYoutubeButton && WEDDING_CONFIG.enableYouTubeWedding && WEDDING_CONFIG.youtubeLiveUrl) {
+            weddingYoutubeButton.style.display = 'flex';
+            weddingYoutubeButton.addEventListener('click', function() {
+                window.open(WEDDING_CONFIG.youtubeLiveUrl, '_blank');
             });
+            console.log('✅ YouTube Live button enabled for Wedding section');
         }
-    });
+    }
     
-    // Show/hide Photos button
+    // Enable YouTube Live button for Reception section
+    const receptionSection = document.getElementById('reception');
+    if (receptionSection) {
+        const receptionYoutubeButton = receptionSection.querySelector('.youtube-button');
+        if (receptionYoutubeButton && WEDDING_CONFIG.enableYouTubeReception && WEDDING_CONFIG.youtubeLiveUrl) {
+            receptionYoutubeButton.style.display = 'flex';
+            receptionYoutubeButton.addEventListener('click', function() {
+                window.open(WEDDING_CONFIG.youtubeLiveUrl, '_blank');
+            });
+            console.log('✅ YouTube Live button enabled for Reception section');
+        }
+    }
+    
+    // Show/hide Photos button (both sections)
     const photosButtons = document.querySelectorAll('.photos-button');
     photosButtons.forEach(button => {
-        if (futureConfig.enablePhotos && futureConfig.photosDriveUrl) {
+        if (WEDDING_CONFIG.enablePhotos && WEDDING_CONFIG.photosDriveUrl) {
             button.style.display = 'flex';
             button.addEventListener('click', function() {
-                window.open(futureConfig.photosDriveUrl, '_blank');
+                window.open(WEDDING_CONFIG.photosDriveUrl, '_blank');
             });
         }
     });
     
-    // Console log for easy configuration
-    console.log('🎊 Wedding Website Future Features Ready!');
-    console.log('To enable YouTube Live: Set futureConfig.enableYouTube = true and add YouTube URL');
-    console.log('To enable Photos: Set futureConfig.enablePhotos = true and add Google Drive URL');
+    // Configuration status log
+    console.log('🎊 Wedding Website Configuration Loaded!');
+    if (WEDDING_CONFIG.enableYouTubeWedding || WEDDING_CONFIG.enableYouTubeReception) {
+        console.log('📺 YouTube Live: Enabled');
+    }
+    if (WEDDING_CONFIG.enablePhotos) {
+        console.log('📷 Photos: Enabled');
+    }
 }
 
 // Initialize everything when DOM is loaded

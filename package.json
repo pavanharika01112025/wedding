@@ -1,0 +1,20 @@
+{
+  "name": "wedding-website",
+  "version": "1.0.0",
+  "description": "Wedding invitation website for Pavan Kalyan and Harika",
+  "scripts": {
+    "dev": "http-server public -p 8080 -o",
+    "start": "npm run dev",
+    "serve": "http-server public -p 8080 -o -c-1"
+  },
+  "keywords": [
+    "wedding",
+    "invitation",
+    "website"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
