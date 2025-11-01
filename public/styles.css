@@ -222,8 +222,8 @@ body.mobile-device {
 .reception-bg {
     /* 
      * TO ADD YOUR RECEPTION BACKGROUND IMAGE:
-     * 1. Place your image file in: public/images/reception-bg.jpg (or .png, .webp)
-     * 2. Update the url below to: url('images/reception-bg.jpg')
+     * 1. Place your image file in: public/images/reception-bg.webp
+     * 2. Update the url below to: url('images/reception-bg.webp')
      * 3. Adjust the overlay gradient opacity if needed for text readability
      */
     background: linear-gradient(135deg, rgba(160, 82, 45, 0.5), rgba(212, 175, 55, 0.4), rgba(244, 208, 63, 0.3)),
