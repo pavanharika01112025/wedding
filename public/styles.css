@@ -208,9 +208,8 @@ body.mobile-device {
      * 2. Update the url below to: url('images/wedding-bg.jpg')
      * 3. The overlay gradient darkens the image for text readability
      */
-    background: linear-gradient(135deg, rgba(139, 69, 19, 0.7), rgba(160, 82, 45, 0.6), rgba(212, 175, 55, 0.5)),
-                /* Replace this line with: url('images/wedding-bg.jpg') */
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23f4e4bc;stop-opacity:1" /><stop offset="50%" style="stop-color:%23d4af37;stop-opacity:1" /><stop offset="100%" style="stop-color:%23b8860b;stop-opacity:1" /></linearGradient></defs><rect width="1200" height="800" fill="url(%23grad1)"/><circle cx="200" cy="200" r="100" fill="rgba(255,255,255,0.15)"/><circle cx="800" cy="400" r="150" fill="rgba(255,255,255,0.08)"/><circle cx="1000" cy="200" r="80" fill="rgba(255,255,255,0.12)"/><polygon points="100,600 300,500 200,700" fill="rgba(255,255,255,0.06)"/></svg>');
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.5), rgba(160, 82, 45, 0.4), rgba(212, 175, 55, 0.3)),
+                url('images/wedding-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -227,9 +226,8 @@ body.mobile-device {
      * 2. Update the url below to: url('images/reception-bg.jpg')
      * 3. Adjust the overlay gradient opacity if needed for text readability
      */
-    background: linear-gradient(135deg, rgba(160, 82, 45, 0.7), rgba(212, 175, 55, 0.6), rgba(244, 208, 63, 0.5)),
-                /* Replace this line with: url('images/reception-bg.jpg') */
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23d4af37;stop-opacity:1" /><stop offset="50%" style="stop-color:%23f4d03f;stop-opacity:1" /><stop offset="100%" style="stop-color:%23ffd700;stop-opacity:1" /></linearGradient></defs><rect width="1200" height="800" fill="url(%23grad2)"/><rect x="100" y="100" width="200" height="300" fill="rgba(255,255,255,0.12)" rx="20"/><rect x="400" y="200" width="150" height="200" fill="rgba(255,255,255,0.08)" rx="15"/><rect x="700" y="150" width="180" height="250" fill="rgba(255,255,255,0.06)" rx="25"/><circle cx="900" cy="600" r="120" fill="rgba(255,255,255,0.04)"/></svg>');
+    background: linear-gradient(135deg, rgba(160, 82, 45, 0.5), rgba(212, 175, 55, 0.4), rgba(244, 208, 63, 0.3)),
+                url('images/reception-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
