@@ -204,12 +204,12 @@ body.mobile-device {
 .hero-image {
     /* 
      * TO ADD YOUR WEDDING BACKGROUND IMAGE:
-     * 1. Place your image file in: public/images/wedding-bg.jpg (or .png, .webp)
-     * 2. Update the url below to: url('images/wedding-bg.jpg')
+     * 1. Place your image file in: public/images/wedding-bg.webp
+     * 2. Update the url below to: url('images/wedding-bg.webp')
      * 3. The overlay gradient darkens the image for text readability
      */
     background: linear-gradient(135deg, rgba(139, 69, 19, 0.5), rgba(160, 82, 45, 0.4), rgba(212, 175, 55, 0.3)),
-                url('images/wedding-bg.jpg');
+                url('images/wedding-bg.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -227,7 +227,7 @@ body.mobile-device {
      * 3. Adjust the overlay gradient opacity if needed for text readability
      */
     background: linear-gradient(135deg, rgba(160, 82, 45, 0.5), rgba(212, 175, 55, 0.4), rgba(244, 208, 63, 0.3)),
-                url('images/reception-bg.jpg');
+                url('images/reception-bg.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
